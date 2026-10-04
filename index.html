@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>WEBSITE</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>WEBSITE</h1>
+
+        <p class="subtitle">
+            WEBSITE MADE BY ME
+        </p>
+
+        <div class="card">
+
+            <h2>WEBSITE SAMPLE</h2>
+
+            <p>
+                This website is the best website ive ever MADE\
+           </p>
+
+            <p>
+                    Hope you will like this website
+            </p>
+
+            <form action="/consent" method="POST">
+
+                <label class="click">
+
+                    <input type="checkbox"
+                           name="clickbox"
+                           required>
+
+                    Click thiss
+
+                </label>
+
+                <button type="submit">
+                    CLICK
+                </button>
+
+            </form>
+
+            {% if consent_given %}
+
+            <div class="result">
+
+                <h2>THATS ALL</h2>
+
+                <div class="ip">
+                    {{ ip_address }}
+                </div>
+
+                <p>
+                    This is the end of the website
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        <footer>
+            Created by me for idk
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
